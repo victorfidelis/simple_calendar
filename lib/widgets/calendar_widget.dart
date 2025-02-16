@@ -59,6 +59,8 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                     CalendarBody(
                       year: year.value,
                       month: month.value,
+                      initialDate: widget.initialDate,
+                      finalDate: widget.finalDate,
                       selectedDate: selectedDate.value,
                       markedDates: widget.markedDates,
                       onSelectDate: onSelectDate,

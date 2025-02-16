@@ -15,7 +15,9 @@ class CalendarDay extends StatelessWidget {
   Widget build(BuildContext context) {
     Color fontColor = Colors.black;
     Color backgroundColor = Colors.transparent;
-    if (calendarDay.isSelectedDay) {
+    if (!calendarDay.isInPeriod) {
+      fontColor = Theme.of(context).colorScheme.shadow;
+    } else if (calendarDay.isSelectedDay) {
       fontColor = Theme.of(context).colorScheme.onSecondary;
       backgroundColor = Theme.of(context).colorScheme.secondary;
     } else if (calendarDay.isMarkedDay) {
@@ -28,7 +30,9 @@ class CalendarDay extends StatelessWidget {
     return Expanded(
       child: GestureDetector(
         onTap: () {
-          onSelectDate(date: calendarDay.date);
+          if (calendarDay.isInPeriod) {
+            onSelectDate(date: calendarDay.date);
+          }
         },
         child: Container(
           height: 50,

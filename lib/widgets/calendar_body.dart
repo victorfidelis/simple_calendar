@@ -8,6 +8,8 @@ import 'package:simple_calendar/widgets/calendar_week_day.dart';
 class CalendarBody extends StatefulWidget {
   final int year;
   final int month;
+  final DateTime initialDate;
+  final DateTime finalDate;
   final Function({required DateTime date}) onSelectDate;
   final DateTime? selectedDate;
   final List<DateTime> markedDates;
@@ -16,6 +18,8 @@ class CalendarBody extends StatefulWidget {
     super.key,
     required this.year,
     required this.month,
+    required this.initialDate,
+    required this.finalDate,
     required this.onSelectDate,
     this.selectedDate,
     this.markedDates = const [],
@@ -213,12 +217,18 @@ class _CalendarBodyState extends State<CalendarBody> {
 
       DateTime date = DateTime(year, month, day);
 
+      bool isInPeriod = true;
+      if (widget.initialDate.compareTo(date) > 0 || widget.finalDate.compareTo(date) < 0) {
+        isInPeriod = false;
+      }
+
       firstWeek.add(
         CalendarDayModel(
           date: date,
           isCurrentMonth: isCurrentMonth,
           isSelectedDay: isSelectedDay,
           isMarkedDay: widget.markedDates.contains(date),
+          isInPeriod: isInPeriod,
         ),
       );
     }
@@ -238,8 +248,8 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       if (isCurrentMonth) {
-        month = this.widget.month;
-        year = this.widget.year;
+        month = widget.month;
+        year = widget.year;
       } else {
         month = nextMonth.month;
         year = nextMonth.year;
@@ -255,12 +265,18 @@ class _CalendarBodyState extends State<CalendarBody> {
 
       DateTime date = DateTime(year, month, day);
 
+      bool isInPeriod = true;
+      if (widget.initialDate.compareTo(date) > 0 || widget.finalDate.compareTo(date) < 0) {
+        isInPeriod = false;
+      }
+
       secondWeek.add(
         CalendarDayModel(
           date: date,
           isCurrentMonth: isCurrentMonth,
           isSelectedDay: isSelectedDay,
           isMarkedDay: widget.markedDates.contains(date),
+          isInPeriod: isInPeriod,
         ),
       );
     }
@@ -280,8 +296,8 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       if (isCurrentMonth) {
-        month = this.widget.month;
-        year = this.widget.year;
+        month = widget.month;
+        year = widget.year;
       } else {
         month = nextMonth.month;
         year = nextMonth.year;
@@ -296,6 +312,11 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       DateTime date = DateTime(year, month, day);
+      
+      bool isInPeriod = true;
+      if (widget.initialDate.compareTo(date) > 0 || widget.finalDate.compareTo(date) < 0) {
+        isInPeriod = false;
+      }
 
       thirdWeek.add(
         CalendarDayModel(
@@ -303,6 +324,7 @@ class _CalendarBodyState extends State<CalendarBody> {
           isCurrentMonth: isCurrentMonth,
           isSelectedDay: isSelectedDay,
           isMarkedDay: widget.markedDates.contains(date),
+          isInPeriod: isInPeriod,
         ),
       );
     }
@@ -322,8 +344,8 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       if (isCurrentMonth) {
-        month = this.widget.month;
-        year = this.widget.year;
+        month = widget.month;
+        year = widget.year;
       } else {
         month = nextMonth.month;
         year = nextMonth.year;
@@ -338,6 +360,11 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       DateTime date = DateTime(year, month, day);
+      
+      bool isInPeriod = true;
+      if (widget.initialDate.compareTo(date) > 0 || widget.finalDate.compareTo(date) < 0) {
+        isInPeriod = false;
+      }
 
       fourthWeek.add(
         CalendarDayModel(
@@ -345,6 +372,7 @@ class _CalendarBodyState extends State<CalendarBody> {
           isCurrentMonth: isCurrentMonth,
           isSelectedDay: isSelectedDay,
           isMarkedDay: widget.markedDates.contains(date),
+          isInPeriod: isInPeriod,
         ),
       );
     }
@@ -364,8 +392,8 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       if (isCurrentMonth) {
-        month = this.widget.month;
-        year = this.widget.year;
+        month = widget.month;
+        year = widget.year;
       } else {
         month = nextMonth.month;
         year = nextMonth.year;
@@ -381,12 +409,18 @@ class _CalendarBodyState extends State<CalendarBody> {
 
       DateTime date = DateTime(year, month, day);
 
+      bool isInPeriod = true;
+      if (widget.initialDate.compareTo(date) > 0 || widget.finalDate.compareTo(date) < 0) {
+        isInPeriod = false;
+      }
+
       fifthWeek.add(
         CalendarDayModel(
           date: date,
           isCurrentMonth: isCurrentMonth,
           isSelectedDay: isSelectedDay,
           isMarkedDay: widget.markedDates.contains(date),
+          isInPeriod: isInPeriod,
         ),
       );
     }
@@ -406,8 +440,8 @@ class _CalendarBodyState extends State<CalendarBody> {
       }
 
       if (isCurrentMonth) {
-        month = this.widget.month;
-        year = this.widget.year;
+        month = widget.month;
+        year = widget.year;
       } else {
         month = nextMonth.month;
         year = nextMonth.year;
@@ -423,12 +457,18 @@ class _CalendarBodyState extends State<CalendarBody> {
 
       DateTime date = DateTime(year, month, day);
 
+      bool isInPeriod = true;
+      if (widget.initialDate.compareTo(date) > 0 || widget.finalDate.compareTo(date) < 0) {
+        isInPeriod = false;
+      }
+
       sixthWeek.add(
         CalendarDayModel(
           date: date,
           isCurrentMonth: isCurrentMonth,
           isSelectedDay: isSelectedDay,
           isMarkedDay: widget.markedDates.contains(date),
+          isInPeriod: isInPeriod,
         ),
       );
     }

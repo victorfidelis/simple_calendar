@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_calendar/widgets/calendar_widget.dart';
+import 'package:simple_calendar/simple_calendar.dart';
 
 void main() {
   runApp(const MyApp());
