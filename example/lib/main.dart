@@ -33,12 +33,12 @@ class CalendarView extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(15),
         child: CalendarWidget(
-          initialDate: DateTime(2023, 1, 1),
+          initialDate: DateTime(2025, 2, 10),
           finalDate: DateTime(2025, 12, 31),
           selectedDate: DateTime(2025, 2, 16),
           markedDates: [
-            DateTime(2024, 8, 26),
-            DateTime(2024, 8, 27),
+            DateTime(2025, 2, 26),
+            DateTime(2025, 2, 27),
             DateTime(2024, 8, 29),
             DateTime(2024, 8, 30),
             DateTime(2024, 9, 1),
