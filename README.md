@@ -2,6 +2,12 @@
 
 **Simple Calendar** é um pacote Flutter que fornece um calendário simples e personalizável. Ele permite definir datas iniciais e finais, selecionar um dia específico e destacar múltiplas datas marcadas.
 
+## 🚀 Funcionalidades
+
+- 📅 Defina uma data inicial e final para o calendário.
+- ✅ Selecione um dia específico.
+- 🔵 Marque múltiplas datas.
+
 ## 📦 Instalação
 
 Adicione a dependência ao seu projeto:
@@ -13,12 +19,6 @@ dependencies:
       url: https://github.com/victorfidelis/simple_calendar.git
       ref: main
 ```
-
-## 🚀 Funcionalidades
-
-- 📅 Defina uma data inicial e final para o calendário.
-- ✅ Selecione um dia específico.
-- 🔵 Marque múltiplas datas.
 
 ## 💻 Exemplo de Uso
 
@@ -72,5 +72,7 @@ class CalendarView extends StatelessWidget {
   }
 }
 ```
+## 🖼️ Captura de Tela
 
+![simple_calendar](https://github.com/user-attachments/assets/c459d983-5c6c-42ed-bcf4-ada9ae87d3cb)
 
