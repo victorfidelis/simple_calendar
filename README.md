@@ -74,5 +74,5 @@ class CalendarView extends StatelessWidget {
 ```
 ## 🖼️ Captura de Tela
 
-![simple_calendar](https://github.com/user-attachments/assets/c459d983-5c6c-42ed-bcf4-ada9ae87d3cb)
+<img src="https://github.com/user-attachments/assets/c459d983-5c6c-42ed-bcf4-ada9ae87d3cb" width="400">
 
